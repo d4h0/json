@@ -27,6 +27,8 @@ use serde::ser::{Serialize, SerializeStruct, Serializer};
 /// [dependencies]
 /// serde_json = { version = "1.0", features = ["raw_value"] }
 /// ```
+/// 
+/// For [technical reasons](https://github.com/serde-rs/json/issues/497), `RawValue` can't be used with untagged enums at the moment. Trying to deserialize to an untagged enum with `RawValue`, therefore, always fails with an error.
 ///
 /// # Example
 ///
